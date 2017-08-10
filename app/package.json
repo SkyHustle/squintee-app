@@ -1,0 +1,12 @@
+{
+  "name": "squintee",
+  "version": "0.0.1",
+  "author": "Dmitry Vizersky <dmitry.vizer@gmail.com>",
+  "description": "Facial recognition for monitoring squinting",
+  "main": "main.js",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "winston": "^2.2.0"
+  }
+}

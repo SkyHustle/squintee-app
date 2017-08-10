@@ -1,0 +1,15 @@
+.progress {
+  margin-top: 2%;
+}
+
+.progress-bar.progress-bar-striped.bg-success {
+  background-color: green;
+}
+
+.badge {
+  background-color: #c9302c;
+}
+
+#email-us {
+  margin-top: 25%;
+}
