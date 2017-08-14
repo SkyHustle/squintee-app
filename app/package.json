@@ -1,6 +1,6 @@
 {
   "name": "squintee",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Dmitry Vizersky <dmitry.vizer@gmail.com>",
   "description": "Facial recognition for monitoring squinting",
   "main": "main.js",
