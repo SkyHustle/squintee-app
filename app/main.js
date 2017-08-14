@@ -102,6 +102,13 @@ app.on('ready', () => {
       window.hide()
     }
   })
+
+  if (!isDevelopment) {
+    mainWindow.webContents.on('did-frame-finish-load', function() {
+      logger.debug("Checking for updates: " + feedURL);
+      autoUpdater.checkForUpdates();
+    });
+  }
 })
 
 const toggleWindow = () => {

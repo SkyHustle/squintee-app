@@ -2,7 +2,7 @@ const {ipcRenderer} = require('electron')
 const appVersion    = require('./package.json').version;
 
 $("#email-us").append(" Version " + appVersion)
-
+$("#email-us-link")[0].href = $("#email-us-link")[0].href + " 0.0.2"
 // Notification
 const path = require('path');
 const notificationOptions = [
