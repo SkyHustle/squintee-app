@@ -1,4 +1,7 @@
 const {ipcRenderer} = require('electron')
+const appVersion    = require('./package.json').version;
+
+$("#email-us").append(" Version " + appVersion)
 
 // Notification
 const path = require('path');
@@ -15,7 +18,7 @@ const notificationOptions = [
   }
 ]
 
-
+console.log("appVersion: ", appVersion)
 
 // SDK Needs to create video and canvas nodes in the DOM in order to function
 // Here we are adding those nodes a predefined div.
