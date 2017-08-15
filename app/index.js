@@ -1,8 +1,13 @@
-const {ipcRenderer} = require('electron')
+const electron      = require('electron');
+const {ipcRenderer} = electron;
 const appVersion    = require('./package.json').version;
 
 $("#email-us-link")[0].href = $("#email-us-link")[0].href + " " + appVersion
 $("title")[0].text = "Squintee " + appVersion
+
+ipcRenderer.on('update-message', function(event, method) {
+  alert(method);
+});
 
 // Notification
 const path = require('path');

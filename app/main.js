@@ -1,15 +1,15 @@
 // Handle Squirrel events for Windows immediately on start
 if(require('electron-squirrel-startup')) return;
 
-const electron = require('electron');
-const {app} = electron;
+const electron        = require('electron');
+const {app}           = electron;
 const {BrowserWindow} = electron;
-const {autoUpdater} = electron;
-const {ipcMain} = electron;
-const os = require('os');
+const {autoUpdater}   = electron;
+const {ipcMain}       = electron;
+const os              = require('os');
 
-const logger = require('winston');
-logger.level = 'debug';
+const logger  = require('winston');
+logger.level  = 'debug';
 global.logger = logger;
 
 // Keep reference of main window because of GC
@@ -25,7 +25,7 @@ if (!isDevelopment) {
     updateFeed = 'https://floating-citadel-39419.herokuapp.com/updates/latest';
   }
   else if (os.platform() === 'win32') {
-    updateFeed = 'http://eatodo.s3.amazonaws.com/updates/latest/win' + (os.arch() === 'x64' ? '64' : '32');
+    // updateFeed = 'https://s3-us-west-2.amazonaws.com/squintee/updates/latest/win' + (os.arch() === 'x64' ? '64' : '32');
   }
 
   autoUpdater.addListener("update-available", function(event) {
@@ -78,8 +78,8 @@ app.on('ready', function() {
   // http://electron.atom.io/docs/latest/api/browser-window/#new-browserwindow-options
   mainWindow = new BrowserWindow({
     name: "squintee",
-    width: 300,
-    height: 300,
+    width: 400,
+    height: 400,
     toolbar: false
   });
 
