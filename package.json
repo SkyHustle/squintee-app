@@ -29,7 +29,7 @@
   },
   "build": {
     "appId": "hr.creaticon.squintee",
-    "mac" : {
+    "mac": {
       "category": "public.app-category.productivity"
     },
     "dmg": {
