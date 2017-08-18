@@ -101,13 +101,9 @@ detector.addEventListener("onStopSuccess", () => {
 });
 
 const triggerSquintNotification = (browFurrowScore) => {
-  if(browFurrowScore > 25) {
-    let squintNotification     = new Notification(notificationOptions[1].title, notificationOptions[1]);
-    // let squintNotificationTime = new Date(squintNotification.timestamp);
-    // let timeNow = new Date(Date.now());
-    // if(squintNotificationTime.getMinutes() == timeNow.getMinutes()) {
-    //   squintNotification = null;
-    // }
+  let sensitivityNumber = Number($("#slider").val())
+  if(browFurrowScore >= (120 - sensitivityNumber)) {
+    let squintNotification  = new Notification(notificationOptions[1].title, notificationOptions[1]);
   }
 }
 
@@ -148,7 +144,6 @@ detector.addEventListener("onImageResultsSuccess", (faces, image, timestamp) => 
     faceNotFound()
   }
 
-  // setTimeout(() => {console.log("setting timeout 5 seconds")}, 5000);
   triggerSquintNotification(faces[0].expressions.browFurrow)
 });
 
