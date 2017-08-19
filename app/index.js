@@ -102,7 +102,7 @@ detector.addEventListener("onStopSuccess", () => {
 
 const triggerSquintNotification = (browFurrowScore) => {
   let sensitivityNumber = Number($("#slider").val())
-  if(browFurrowScore >= (120 - sensitivityNumber)) {
+  if(browFurrowScore >= (115 - sensitivityNumber)) {
     let squintNotification  = new Notification(notificationOptions[1].title, notificationOptions[1]);
   }
 }
