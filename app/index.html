@@ -3,8 +3,9 @@
   <head>
     <title>Squintee</title>
     <meta name="referrer" content="origin">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body>
@@ -28,6 +29,23 @@
       <!-- <button id="reset" onclick="onReset()"   type="button" class="btn btn-warning btn-sm">Reset</button> -->
       Face Found: <span id="face-found-badge" class="badge badge-pill badge-danger">NO</span>
 
+      <div class="row" id="sensitivity-slider">
+        <h4>Sensitivity</h4>
+        <div class="col-md-12">
+          <input
+            id="slider"
+            type="text"
+            name="sensitivity"
+            data-provide="slider"
+            data-slider-ticks="[20, 40, 60, 80, 100]"
+            data-slider-ticks-labels='["less", "", "", "", "more"]'
+            data-slider-step="20"
+            data-slider-value="60"
+            data-slider-tooltip="hide"
+          >
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-8" id="email-us">
           Love it? Hate it? Want additional features?
@@ -41,6 +59,7 @@
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
   <script src="https://download.affectiva.com/js/3.2/affdex.js"/>
   <script src="https://download.affectiva.com/js/nightly/affdex.js"></script>
   <!-- <script type="text/javascript" src="affdex-native-bindings.asm.js"></script>

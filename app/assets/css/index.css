@@ -1,3 +1,8 @@
+body {
+  background: grey;
+  text-align: center;
+}
+
 .progress {
   margin-top: 2%;
 }
@@ -11,7 +16,11 @@
 }
 
 #email-us {
-  margin-top: 55%;
+  margin-top: 35%;
+}
+
+div#sensitivity-slider {
+  margin-top: 5%;
 }
 
 #download-app-osx{
