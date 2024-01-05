@@ -1,7 +1,7 @@
 {
   "name": "squintee",
   "version": "0.0.4",
-  "author": "Dmitry Vizersky <dmitry.vizer@gmail.com>",
+  "author": "Dmitry Sky <dmitry.sky@iCloud.com>",
   "description": "Facial recognition for monitoring squinting",
   "main": "main.js",
   "license": "MIT",
